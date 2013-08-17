@@ -18,7 +18,7 @@ body {
 }
 
 .wrap {
-	max-width: 1545px;
+	max-width: 1680px;
 	margin: 0 auto;
 }
 
@@ -60,25 +60,145 @@ body {
 }
 
 
-.posts-wrap {}
+/**
+ * Физика колонок
+ *
+ * 
+одна
+384
+
+две уменьшенных
+708 две
+
+три уменьшенных
+1032 три
+
+четыре уменьшенных
+1356 четыре
+
+пять уменьшенных
+1680 пять
+пять
+
+ */
+
+.posts-wrap {
+	padding: 0 40px;
+}
 
 .post-item {
 	float: left;
-	width: 371px;
-	height: 20px;
 	margin-bottom: 20px;
+	
+	box-sizing: border-box;
+}
+
+.post-item__content {
 	background: #4d9a66;
+	height: 20px;
 }
 
-.post-item + .post-item {
-	margin-left: 20px;
+.post-item {
+	width: 100%;
 }
 
 
+@media only screen and (min-width: 385px) and (max-width: 708px) {
+	.post-item {
+		width: 50%;
+		padding: 0 10px;
+	}
+
+	.post-item:nth-child(2n+1) {
+		padding-left: 0;
+	}
+	
+	.post-item:nth-child(2n+1) .post-item__content {
+		background: red;
+	}
+
+	.post-item:nth-child(2n+2) {
+		padding-right: 0;
+	}
+
+	.post-item:nth-child(2n+2) .post-item__content {
+		background: blue;
+	}
+}
+
+@media only screen and (min-width: 709px) and (max-width: 1032px) {
+	.post-item {
+		width: 33.3%;
+		padding: 0 10px;
+	}
+	.post-item:nth-child(3n+1) {
+		width: 33.4%;
+	}
 
 
+	.post-item:nth-child(3n+1) {
+		padding-left: 0;
+	}
+	
+	.post-item:nth-child(3n+1) .post-item__content {
+		background: red;
+	}
+
+	.post-item:nth-child(3n+3) {
+		padding-right: 0;
+	}
+
+	.post-item:nth-child(3n+3) .post-item__content {
+		background: blue;
+	}
+}
 
 
+@media only screen and (min-width: 1033px) and (max-width: 1356px) {
+	.post-item {
+		width: 25%;
+		padding: 0 10px;
+	}
 
+	.post-item:nth-child(4n+1) {
+		padding-left: 0;
+	}
+	
+	.post-item:nth-child(4n+1) .post-item__content {
+		background: red;
+	}
+
+	.post-item:nth-child(4n+4) {
+		padding-right: 0;
+	}
+
+	.post-item:nth-child(4n+4) .post-item__content {
+		background: blue;
+	}
+}
+
+
+@media only screen and (min-width: 1357px) {
+	.post-item {
+		width: 20%;
+		padding: 0 10px;
+	}
+
+	.post-item:nth-child(5n+1) {
+		padding-left: 0;
+	}
+	
+	.post-item:nth-child(5n+1) .post-item__content {
+		background: red;
+	}
+
+	.post-item:nth-child(5n+5) {
+		padding-right: 0;
+	}
+
+	.post-item:nth-child(5n+5) .post-item__content {
+		background: blue;
+	}
+}
 
 
