@@ -166,9 +166,7 @@ body {
 	}
 }
 
-
-
-.post-preview_type_img {
+.post-preview {
 	overflow: hidden;
 }
 
@@ -187,7 +185,7 @@ body {
 	font-family: 'PT Sans', sans-serif;
 }
 
-.post-preview_type_green .post-preview__link {
+.post-preview_type_green .post-preview__link:link {
 	background: #4d9a66;
 	padding: 38px;
 }	
