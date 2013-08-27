@@ -29,6 +29,21 @@ body {
 .logo {
 	display: block;
 	float: left;
+	height: 35px;
+}
+
+.logo_size_small {
+	-webkit-transform-origin-x: 0;
+	   -moz-transform-origin-x: 0;
+	    -ms-transform-origin-x: 0;
+	     -o-transform-origin-x: 0;
+	        transform-origin-x: 0;
+	
+    -webkit-transform: scale(0.5);
+       -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+         -o-transform: scale(0.5);
+            transform: scale(0.5);
 }
 
 .menu {
@@ -39,6 +54,9 @@ body {
 	font-size: 12px;
 	font-weight: 700;
 	text-transform: uppercase;
+
+	height: 35px;
+	line-height: 35px;
 }
 
 .menu__item {
@@ -155,7 +173,6 @@ body {
 	line-height: 21px;
 }
 
-
 .post-preview_type_green .post-preview__desc {
 	margin-top: 95px;
 	font-size: 16px;
@@ -182,7 +199,6 @@ body {
 	margin-right: -.3em;
 	/*float: left;*/
 }
-
 
 .post-preview__tag::after {
 	content: ', ';
