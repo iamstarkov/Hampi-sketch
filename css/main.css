@@ -113,9 +113,6 @@ body {
 
  */
 
-.cells-wrap {
-	padding: 0 40px;
-}
 
 .cell {
 	float: left;
@@ -291,6 +288,7 @@ body {
 		padding: 20px;
 	}
 
+	.cells-wrap,
 	.content-wrap {
 		padding: 0 20px;
 	}
@@ -324,7 +322,6 @@ body {
 		margin-left: 24px;
 	}
 	
-
 	.menu__toggler {
 		display: none;
 	}
@@ -343,7 +340,8 @@ body {
 	.header {
 		padding: 40px;
 	}
-
+	
+	.cells-wrap,
 	.content-wrap {
 		padding: 0 40px;
 	}
