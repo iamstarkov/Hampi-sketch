@@ -230,6 +230,7 @@ body {
 .post__date {
 	font-size: 14px;
 	line-height: 1.6;
+	margin-top: -.5em;
 }
 
 .post__title {
@@ -262,7 +263,7 @@ body {
 	}
 	
 	.menu__list {
-		padding-top: 31px;
+		padding-top: 20px;
 		width: 100%;
 		float: none;
 		clear: both;
@@ -273,7 +274,7 @@ body {
 	}
 
 	.menu__wrap {
-		line-height: 45px;
+		line-height: 60px;
 		font-size: 16px;
 	}
 
