@@ -288,9 +288,16 @@ body {
 	}
 	
 	.post__images-wrap {
+		margin-top: 0;
 		float: right;
 		width: 64%;
 	}
 }
 
-@media screen and (min-widh: 1400px) {}
+@media screen and (min-widh: 1400px) {
+	
+	.post__image {
+		width: 50%;
+		float: left;
+	}
+}
