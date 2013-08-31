@@ -281,8 +281,16 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
-	body {
-		background: red;
+	.post__content-wrap {
+		width: 26%;
+		margin-right: 10%;
+		float: left;
+	}
+	
+	.post__images-wrap {
+		float: right;
+		width: 64%;
 	}
 }
+
 @media screen and (min-widh: 1400px) {}
