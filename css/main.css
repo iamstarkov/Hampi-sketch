@@ -218,8 +218,8 @@ body {
 
 .post {
 	font-family: 'PT Sans', sans-serif;
-	width: 33%;
 }
+.post__content-wrap {}
 
 .post__date {
 	font-size: 14px;
@@ -243,3 +243,23 @@ body {
 .post__tags {
 	margin-top: 2em;
 }
+
+@media screen and (min-width: 0px) {
+	.menu {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 0px) {
+	.post__images-wrap {
+		margin-top: 48px;
+	}
+	
+	.post__image {
+		max-width: 100%;
+		margin-bottom: 12px;
+	}
+}
+@media screen and (min-width: 600px) {}
+@media screen and (min-width: 1000px) {}
+@media screen and (min-widh: 1400px) {}
