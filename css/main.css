@@ -22,9 +22,7 @@ body {
 	margin: 0 auto;
 }
 
-.header {
-	padding: 40px;
-}
+
 
 .logo {
 	display: block;
@@ -208,9 +206,6 @@ body {
 	content: '';
 }
 
-.content-wrap {
-	padding: 0 40px;
-}
 
 .post-preview__tags {
 	margin-top: 5em;
@@ -219,7 +214,6 @@ body {
 .post {
 	font-family: 'PT Sans', sans-serif;
 }
-.post__content-wrap {}
 
 .post__date {
 	font-size: 14px;
@@ -251,15 +245,39 @@ body {
 }
 
 @media screen and (min-width: 0px) {
+	
+	header {
+		padding: 20px;
+	}
+
+	.content-wrap {
+		padding: 0 20px;
+	}
+
 	.post__images-wrap {
 		margin-top: 48px;
 	}
-	
+
 	.post__image {
 		max-width: 100%;
 		margin-bottom: 12px;
 	}
+
 }
-@media screen and (min-width: 600px) {}
+
+@media screen and (min-width: 600px) {
+
+	.menu {
+		display: block;
+	}
+
+	.header {
+		padding: 40px;
+	}
+
+	.content-wrap {
+		padding: 0 40px;
+	}
+}
 @media screen and (min-width: 1000px) {}
 @media screen and (min-widh: 1400px) {}
