@@ -313,7 +313,7 @@ body {
 
 	.menu__list {
 		width: auto;
-		display: block;
+		max-height: 500px;
 		clear: none;
 		float: right;
 		padding-top: 0;
@@ -325,6 +325,7 @@ body {
 
 	.menu__item + .menu__item {
 		margin-left: 24px;
+		margin-top: 0;
 	}
 	
 	.menu__toggler {
