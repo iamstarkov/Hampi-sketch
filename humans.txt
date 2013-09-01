@@ -4,6 +4,7 @@
 # TEAM
 
     Vladimir Starkov -- developer -- @matmuchrapna
+    Elovsky Evgeny -- designer -- @elovsky
 
 # THANKS
 
