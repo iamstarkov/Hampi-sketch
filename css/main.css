@@ -78,6 +78,10 @@ body {
 
 }
 
+.menu__list {
+	overflow: hidden;
+}
+
 
 .menu__link {
 	color: inherit;
@@ -101,48 +105,48 @@ body {
 }
 
 /**
- * imenu_mode_mobile
+ * imenu_state_mobile
  */
 
 
-.imenu_mode_mobile .menu__list,
-.imenu_mode_mobile .menu__toggler {
+.imenu_state_mobile .menu__list,
+.imenu_state_mobile .menu__toggler {
 	display: block;
 }
 
-.imenu_mode_mobile .menu__toggler {
+.imenu_state_mobile .menu__toggler {
 	z-index: 1;
 }
 
 /* States */
-.imenu_mode_mobile-closed .menu__list {
+.imenu_state_mobile-closed .menu__list {
 	height: auto;
 	max-height: 0;
 	opacity: 0;
 }
 
-.imenu_mode_mobile-opened .menu__list {
+.imenu_state_mobile-opened .menu__list {
 	max-height: 1000px;
-	padding-top: 55px;
+	padding-top: 20px;
 	opacity: 1;
 }
 /* /States */
 
 
-.imenu_mode_mobile .menu__list {
+.imenu_state_mobile .menu__list {
 	width: 100%;
 }
 
-.imenu_mode_mobile .menu__item + .menu__item {
+.imenu_state_mobile .menu__item + .menu__item {
 	margin-top: 2px;
 }
 
-.imenu_mode_mobile.menu__wrap {
+.imenu_state_mobile.menu__wrap {
 	line-height: 60px;
 	font-size: 16px;
 }
 
-.imenu_mode_mobile .menu__link {
+.imenu_state_mobile .menu__link {
 	display: block;
 	text-align: center;
 	color: #fff;
@@ -152,41 +156,41 @@ body {
 */
 
 /**
- * imenu_mode_desktop
+ * imenu_state_desktop
  */
 
-.imenu_mode_desktop .menu__toggler {
+.imenu_state_desktop .menu__toggler {
 	display: none;
 }
 
-.imenu_mode_desktop .menu__list {
+.imenu_state_desktop .menu__list {
 	display: block;
 }
 
-.imenu_mode_desktop .menu__list {
+.imenu_state_desktop .menu__list {
 	float: right;
 }
 
-.imenu_mode_desktop .menu__item {
+.imenu_state_desktop .menu__item {
 	float: left;
 }
 
-.imenu_mode_desktop .menu__item + .menu__item {
+.imenu_state_desktop .menu__item + .menu__item {
 	margin-left: 24px;
 	margin-top: 0;
 }
 
-.imenu_mode_desktop .menu__toggler {
+.imenu_state_desktop .menu__toggler {
 	display: none;
 }
 
-.imenu_mode_desktop {
+.imenu_state_desktop {
 	line-height: 35px;
 	font-weight: 700;
 	font-size: 12px;
 }
 
-.imenu_mode_desktop .menu__link {
+.imenu_state_desktop .menu__link {
 	color: #000;
 	background: none;
 }

@@ -1,7 +1,6 @@
-/*!
- * jQuery 'best options' plugin boilerplate
- * Author: @cowboy
- * Further changes: @addyosmani
+/*
+ * jquery.imenu — best state manager for your adaptive menu!
+ * Author: @matmuchrapna
  * Licensed under the MIT license
  */
 
@@ -9,26 +8,32 @@
 
 $.fn.imenu = function ( custom_options ) {
 
-	function on_switch($elem, o, is_mobile) {
-		if (is_mobile) {
-			o.debug && console.log('desktop -> mobile');
-			$elem.addClass(
-				$elem.data('imenu-state')
-			);
-		} else {
-			o.debug && console.log('mobile -> desktop');
-			$elem.data(
-				'imenu-state',
-				o.classes.states[
-					($elem.hasClass(o.classes.states[0])) ? 0 : 1
-				]
-			);
-			$elem.removeClass( o.classes.states.join(' ') );
+	function log(debug, message) {
+		if (debug) {
+			console.log(message);
 		}
 	}
 
-	function setting_modes($elem, o) {
-		$elem.removeClass(o.classes.modes.join(' '));
+	function on_switch($elem, o, is_mobile) {
+		if (is_mobile) {
+			log(o.debug, 'desktop -> mobile');
+			$elem.addClass(
+				$elem.data('imenu-mobile-state')
+			);
+		} else {
+			log(o.debug, 'mobile -> desktop');
+			$elem.data(
+				'imenu-mobile-state',
+				o.classes.mobile_states[
+					($elem.hasClass(o.classes.mobile_states[0])) ? 0 : 1
+				]
+			);
+			$elem.removeClass( o.classes.mobile_states.join(' ') );
+		}
+	}
+
+	function setting_states($elem, o) {
+		$elem.removeClass(o.classes.states.join(' '));
 		
 		var is_mobile = $(window).width() < o.breakpoint;
 
@@ -38,7 +43,7 @@ $.fn.imenu = function ( custom_options ) {
 		$elem.data('is_mobile', is_mobile);
 
 
-		$elem.addClass(o.classes.modes[is_mobile ? 0 : 1]);
+		$elem.addClass(o.classes.states[is_mobile ? 0 : 1]);
 	}
 
 	options = $.extend( {}, $.fn.imenu.options, custom_options );
@@ -48,21 +53,23 @@ $.fn.imenu = function ( custom_options ) {
 		var $elem = $(this),
 			o = $.extend( {}, options, $elem.data('imenu') );
 
-		o.debug && console.log($elem, o);
+		log(o.debug, {element: $elem, options: o});
+		$elem.data('imenu-mobile-state', o.classes.mobile_states[0]);
 
 		$elem.data('is_mobile', $(window).width() < o.breakpoint );
+		
+		setting_states($elem, o);
 
-		setting_modes($elem, o);
 		$(window).resize(function() {
-			setting_modes($elem, o);
+			setting_states($elem, o);
 		});
 
 		if ($elem.data('is_mobile')) {
-			$elem.addClass(o.classes.states[0]);
+			$elem.addClass(o.classes.mobile_states[0]);
 		}
 		$(o.toggler).on('click', function (event) {
 			if ($elem.data('is_mobile')) {
-				$elem.toggleClass( o.classes.states.join(' ') );
+				$elem.toggleClass( o.classes.mobile_states.join(' ') );
 			}
 			event.preventDefault();
 		});
@@ -73,11 +80,11 @@ $.fn.imenu = function ( custom_options ) {
 
 $.fn.imenu.options = {
 	breakpoint: 600,
-	debug: false,
+	debug: true,
 	toggler: '.imenu__toggler',
 	classes: {
-		modes: [ 'imenu_mode_mobile', 'imenu_mode_desktop' ],
-		states: [ 'imenu_mode_mobile-closed', 'imenu_mode_mobile-opened' ]
+		states: [ 'imenu_state_mobile', 'imenu_state_desktop' ],
+		mobile_states: [ 'imenu_state_mobile-closed', 'imenu_state_mobile-opened' ]
 	}
 };
 
